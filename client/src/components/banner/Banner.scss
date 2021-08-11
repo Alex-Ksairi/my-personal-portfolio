@@ -1,0 +1,95 @@
+// importing variables, mixin
+@import '../../styles/variables';
+@import '../../styles/mixin';
+
+/* Banner */
+
+.banner {
+    @include measurement (50%, 200px);
+
+    margin-top: 500px;
+    text-align: center;
+
+    @include tablet {
+        margin-left: 0;
+        height: 200px;
+        margin-top: 500px;
+    }
+
+    @include mobile {
+        margin-left: 0;
+        height: 100px;
+        margin-top: 440px;
+    }
+
+    h1 {
+        margin-top: 30px;
+        margin-bottom: 40px;
+        font-size: 3rem;
+        color: var(--input-color);
+
+        @include tablet {
+            font-size: 2rem;
+            margin-top: 15px;
+        }
+
+        @include mobile {
+            font-size: var(--h1-font-size);
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+    }
+
+    span {
+        color: var(--first-color);
+        animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
+
+        @keyframes span {
+            0% {
+              opacity: 0;
+            }
+            50% {
+              opacity: 1;
+            }
+            100% {
+              opacity: 0;
+            }
+          }
+    }
+
+    div {
+        @include measurement (100px, 5px);
+        background-color: var(--first-color);
+        margin: -20px auto;
+
+        @include tablet {
+            width: 60px;
+        }
+
+        @include mobile {
+            width: 50px;
+        }
+    }
+
+    p {
+        margin-top: 40px;
+        width: 55%;
+        margin-left: 23%;
+        font-size: 1.5rem;
+        color: var(--body-color);
+
+        @include tablet {
+            font-size: var(--h1-font-size);
+            width: 100%;
+            margin-left: 0;
+            font-size: 0.9rem;
+        }
+
+        @include mobile {
+            font-size: var(--small-font-size);
+            margin-top: 30px;
+        }
+    }
+}
+
+/* End of Banner */

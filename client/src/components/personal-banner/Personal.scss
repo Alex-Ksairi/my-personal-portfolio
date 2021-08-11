@@ -1,0 +1,21 @@
+@import '../../styles/mixin';
+@import '../../styles/variables';
+
+.img {
+    @include measurement (20%, auto);
+    @include position (absolute, 50%, 50%);
+    
+    @include tablet {
+        @include measurement (30vw, auto);
+    };
+
+    @include mobile {
+        @include measurement (40vw, auto);
+        @include position (absolute, 50%, 50%);
+    };
+
+    transform: translate(-50%, 50%);
+
+    border: $border;
+    border-radius: 50%;
+}

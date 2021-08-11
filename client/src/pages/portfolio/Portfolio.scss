@@ -1,0 +1,76 @@
+@import '../../styles/mixin';
+
+#portfolio {
+    padding-top: 150px;
+
+    .subtitle {
+        margin-top: 50px;
+        text-align: center;
+        color: var(--text-color-light);
+        font-size: var(--h2-font-size);
+        letter-spacing: var(--letter-spacing-btn);
+    }
+}
+
+.portfolio-section {
+    @include measurement (100%, auto);
+
+    margin-bottom: 100px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+    @include mobile {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .portfolio-container {
+        @include measurement (80%, auto);
+        margin: 0 auto;
+
+        .portfolio-card {
+            height: 300px;
+            border-radius: 10px;
+            box-shadow: 3px 4px 10px var(--text-color-light);
+            padding: 20px;
+
+            .portfolio-date {
+                color: var(--text-color-light);
+                margin-bottom: 10px;
+            }
+
+            .portfolio-title {
+                color: var(--font-color);
+                margin-bottom: 10px;
+                letter-spacing: var(--letter-spacing-btn);
+                text-transform: uppercase;
+                font-size: var(--h1-font-size);
+            }
+
+            .portfolio-para {
+                color: var(--font-color);
+                font-size: var(--h3-font-size);
+            }
+
+            .portfolio-anchors {
+                margin-top: -60px;
+
+                .div {
+                    a {
+                        border-radius: 10px;
+                    }
+                }
+
+                .portfolio-gitHub {
+                    margin-left: 30px;
+                }
+
+                i {
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+}

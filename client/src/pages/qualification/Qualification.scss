@@ -1,0 +1,94 @@
+@import '../../styles/mixin';
+
+#qualification {
+    padding-top: 150px;
+
+    .qualification-subtitle {
+        margin-bottom: 60px;
+        text-align: center;
+        color: var(--text-color-light);
+        font-size: var(--h2-font-size);
+        letter-spacing: var(--letter-spacing-btn);
+    }
+}
+
+.qualification-section {
+    margin-top: -40px;
+    background-color: var(--input-color);
+    padding: 10px;
+
+    .qualification-container {
+        @include measurement (95%, auto);
+        padding: 10px;
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 50px;
+
+        @include tablet {
+            grid-template-columns: 1fr;
+        }
+
+        .education-section {
+
+            .qualification-header {
+                padding: 10px;
+                margin-bottom: 20px;
+
+                display: flex;
+                justify-content: center;
+
+                i {
+                    padding-right: 20px;
+                    font-size: var(--h2-font-size);
+                    color: var(--first-color);
+                }
+
+                h1 {
+                    color: var(--text-color);
+                }
+
+            }
+
+            .qualification-info {
+                padding: 10px;
+                background-color: var(--body-color);
+                border-radius: 30px;
+
+                margin-bottom: 20px;
+                border: 1px solid var(--first-color);
+
+                .qualification-content {
+                    padding: 20px;
+                    height: 260px;
+
+                    h4 {
+                        color: var(--text-color-light);
+                        padding-bottom: 10px;
+                    }
+
+                    h2 {
+                        color: var(--font-color);
+                        padding-bottom: 10px;
+
+                        @include mobile {
+                            font-size: var(--h2-font-size);
+                        }
+                    }
+
+                    ul {
+                        padding-left: 40px;
+                        
+
+                        li {
+                            padding: 10px;
+                            color: var(--font-color);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

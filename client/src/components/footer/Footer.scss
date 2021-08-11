@@ -1,0 +1,125 @@
+// importing mixin
+@import '../../styles/mixin';
+
+.footer {
+    width: 100%;
+    background-color: var(--input-color);
+    color: var(--font-color);
+    font-size: 1rem;
+    box-shadow: 5px -6px 10px -6px var(--text-color-light);
+
+    // position: static;
+    // bottom: 0;
+
+    .main-container {
+        padding: 40px 120px;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+
+        @media screen and (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+            padding: 60px 40px;
+        }
+
+        @media screen and (max-width: 576px) {
+            grid-template-columns: 1fr;
+            padding: 60px 40px;
+        }
+    }
+
+    h3 {
+        text-transform: uppercase;
+        color: var(--first-color);
+    }
+
+    p {
+        text-align: justify;
+        font-size: 1rem;
+    }
+
+    hr {
+        margin-bottom: 20px;
+    }
+
+    .contact-info {
+        margin-bottom: 10px;
+
+        a {
+            color: var(--font-color);
+            font-size: 1.1rem;
+            margin-left: 10px;
+        }
+
+        .email , .phone , .location  {
+            padding-bottom: 10px;
+        }
+
+        i {
+            color: var(--font-color);
+        }
+    }
+
+    .contact {
+        .contact-social-media {
+            .fab {
+                color: var(--font-color);
+                padding: 5px;
+                font-size: 1.5rem;
+
+                &:hover {
+                    color: var(--text-color-light);
+                }
+            }
+        }
+    }
+
+    .footer-container {
+        background-color: var(--text-color);
+        width: 100vw;
+        height: 60px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .go-top {
+            font-size: 1.5rem;
+            margin-left: 50px;
+
+            i {
+                color: var(--first-color);
+                border: 1px solid var(--font-color);
+                padding: 10px;
+                border-radius: 50%;
+
+                &:hover {
+                    color: var(--first-color);
+                    background-color: var(--title-color);
+                    border: 1px solid transparent;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .copyright {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+
+            span a {
+                color: var(--body-color);
+
+                &:hover {
+                    color: var(--first-color);
+                }
+            }
+
+            p {
+                color: var(--body-color);
+                text-transform: uppercase;
+            }
+        }
+    }
+}

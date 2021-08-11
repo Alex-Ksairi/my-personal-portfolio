@@ -1,0 +1,21 @@
+// importing mixin scss
+@import '../../styles/mixin';
+
+/* Hero */
+.defaultHero {
+  min-height: 110vh;
+  background: url('../../images/73280243-9244-4FBE-BC8D-3C18B3E07DC3_1_105_c.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include display (flex, center, center);
+
+  @include tablet {
+    min-height: 90vh;
+  }
+
+  @include mobile {
+    min-height: 90vh;
+  }
+}

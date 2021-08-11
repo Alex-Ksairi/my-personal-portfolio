@@ -1,0 +1,328 @@
+// importing mixin
+@import '../../styles/mixin';
+@import '../../styles/variables';
+
+
+// styling navbar starts right below 
+@include tablet {
+    #radius {
+        border-radius: 0 0 30px 30px;
+    }
+}
+
+.nav-dark {
+    background-color: var(--body-dark-theme);
+    color: var(--body-color);
+}
+
+.nav{
+    @include measurement (100%, 95px);
+
+    vertical-align: middle;
+    box-shadow: 5px 3px 10px var(--text-color-light);
+    // margin-bottom: 100px;
+
+    position: fixed;
+    top: 0;
+    background-color: var(--body-color);
+
+    z-index: var(--z-tooltip);
+
+    @include tablet {
+        height: auto;
+    }
+
+    @include mobile {
+        max-width: 968px;
+    }
+
+    .nav-opened-container {
+        @include display (flex, space-evenly, center);
+
+        margin-top: 25px;
+
+        @include tablet {
+            #hidden {
+                display: none;
+            }
+            
+            display: flex;
+            flex-direction: column;
+        }
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav-logo {
+            @include display (flex, flex-start, center);
+            
+            border: 2px solid var(--font-color);
+            // border-radius: 10px;
+            width: auto;
+            margin-left: 45px;
+            padding: 2px;
+
+            @include tablet {
+                margin: 0 0 26px;
+                // margin: 0 15px 0 0;
+                width: auto;
+            }
+
+            @include mobile {
+                width: auto;
+                margin-left: 0;
+                padding-right: 1px;
+            }
+
+            .own-logo {
+                padding-left: 15px;
+                padding-top: 3px;
+
+                .logo-name {
+                    font-size: 0.8rem;
+                    color: var(--font-color);
+                    margin-left: 5px;
+                    letter-spacing: 1.1rem;
+                    text-transform: uppercase;
+                    
+                    .first-name {
+                        color: var(--first-color);
+                    }
+
+                    .span-last-name {
+                        display: block;
+                        font-size: 1.3rem;
+                        letter-spacing: 22px;
+                        font-weight: 800;
+
+                        @include mobile {
+                            font-size: 1rem;
+                        }
+                    }
+    
+                    @include mobile {
+                        font-size: .6rem;
+                        margin-left: 5px
+                    }
+                }
+            }
+        }
+
+        .navigation {
+            margin-right: 100px;
+            display: block;
+
+            @include tablet {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 25px;
+
+                margin: 30px auto;
+
+                // display: none;
+            }
+
+            @include mobile {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+
+                margin: 20px auto;
+
+                // display: none;
+            }
+
+            .links {
+                display: table-cell;
+                position: relative;
+
+                @include tablet {
+                    text-align: center;
+                }
+
+                @include mobile {
+                    font-size: var(--small-font-size);
+                    text-align: center;
+                }
+
+                a {
+                    color: var(--font-color);
+                    padding-left: 20px;
+                    font-size: 1.3em;
+                    text-transform: uppercase;
+
+                    @include mobile {
+                        width: 100%;
+                    }
+    
+                    &:hover {
+                        color: var(--first-color);
+                    }
+    
+                    &:after {    
+                        content: "";
+                        @include position (absolute, -6px, 50%);
+                        @include measurement (0, 2px);
+                        
+                        background: none repeat scroll 0 0 transparent;
+                        display: block;
+                        background: var(--first-color);
+                        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                    }
+    
+                    &:hover:after { 
+                        width: 100%; 
+                        left: 12%;
+                        
+                        @include tablet {
+                            left: 0%;
+                        }
+
+                        @include mobile {
+                            left: 0%;
+                        }
+                    }
+                }
+
+                i {
+                    display: none;
+
+                    &:hover {
+                        color: var(--first-color);
+                    }
+
+                    @include tablet {
+                        font-size: 2.2rem;
+                        display: block;
+                        margin: 0 50px 20px 50px;
+                    }
+
+                    @include mobile {
+                        font-size: 1.5rem;
+                        display: block;
+                        margin: 0 50px 20px 50px;
+                    }
+                }
+
+            }
+        }
+
+        .social-media {
+            margin-right: 260px;
+            font-size: var(--h2-font-size);
+            display: block;
+
+            a {
+                color: var(--font-color);
+                padding-left: 15px;
+
+                &:hover {
+                    color: var(--first-color);
+                }
+
+                @include tablet {
+                    padding: 0 30px;
+                }
+
+                @include mobile {
+                    padding: 0 30px;
+                }
+            }
+
+            @include tablet {
+                margin: 20px auto;
+                // display: none;
+            }
+
+            @include mobile {
+                margin: 10px auto;
+                // display: none;
+            }
+        }
+
+        .change-mode {
+            margin-right: 50px;
+            font-size: var(--h2-font-size);
+            color: var(--text-color-light);
+            display: block;
+
+            &:hover {
+                color: var(--first-color);
+                cursor: pointer;
+            }
+
+            @include tablet {
+                font-size: var(--h1-font-size);
+                position: absolute;
+                top: 38px;
+                left: 100px;
+
+                // display: none;
+            }
+
+            @include mobile {
+                font-size: var(--h1-font-size);
+                position: absolute;
+                top: 35px;
+                left: 35px;
+
+                // display: none;
+            }
+        }
+
+        .nav-close {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: var(--font-color);
+
+            display: none;
+
+            &:hover {
+                color: var(--first-color);
+                cursor: pointer;
+            }
+
+            @include tablet {
+                display: block;
+                position: absolute;
+                top: 30px;
+                right: 100px;
+            }
+
+            @include mobile {
+                display: block;
+                position: absolute;
+                top: 28px;
+                right: 25px;
+            }
+        }
+
+        .nav-toggle {
+            font-size: var(--h1-font-size);
+            color: var(--font-color);
+
+            display: none;
+
+            &:hover {
+                color: var(--first-color);
+                cursor: pointer;
+            }
+
+            @include tablet {
+                display: block;
+                position: absolute;
+                top: 40px;
+                right: 100px;
+            }
+
+            @include mobile {
+                display: block;
+                position: absolute;
+                top: 34px;
+                right: 25px;
+            }
+        }
+    }
+}
