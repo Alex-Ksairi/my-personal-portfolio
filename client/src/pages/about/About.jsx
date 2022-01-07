@@ -8,7 +8,7 @@ import Title from '../../components/title/Title';
 import alex_pic from "../../images/22594264-55D5-4991-97A4-2628B6B5D022_1_201_a.jpeg";
 
 // pdf
-import Resume from '../../pdf/Alex-resumé.pdf'
+import Resume from '../../pdf/Alexander_Ksairi_Resumé.pdf'
 
 // dci url
 let dci_url = 'https://digitalcareerinstitute.org/';
