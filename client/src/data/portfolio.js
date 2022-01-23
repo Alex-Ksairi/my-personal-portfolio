@@ -3,7 +3,7 @@ let portfolioData = [
         id: 1,
         date: '30-09-2021',
         title: 'cinéfilo',
-        para: 'Cinéfilo, is the right place for all movie lovers! Once you registered yourself you will be able to search for movies, tv-shows and others. ',
+        para: 'Cinéfilo, is the right place for all movie lovers...! Once you registered yourself you will be able to search for movies, tv-shows and others. ',
         links: [
             {
                 id: 1,
